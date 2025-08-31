@@ -119,13 +119,105 @@ Use-as para descoberta, organização e triagem de literatura.
 
 # Descrição do _dataset_ selecionado
 
-Nesta seção, apresente uma visão clara e objetiva do dataset selecionado, incluindo:
-* Identificação e origem – Nome, link de acesso, fonte (instituição, repositório, API etc.) e licença de uso.
-* Visão geral – Total de registros e atributos, período coberto e breve contextualização.
-* Atributos – Tabela com nome, descrição, tipo, unidade de medida (se aplicável) e exemplos de valores.
-* Qualidade dos dados – Presença de valores faltantes, inconsistências, duplicatas ou outliers.
+## Dataset — FootyStats CSV (Liga, Partidas, Times, Jogadores)
 
-**Dica:** Seja objetivo, mas inclua detalhes suficientes para que outra pessoa possa entender e reutilizar o conjunto de dados sem buscar informações extras.
+### 1) Identificação e Origem
+
+- Nome oficial: FootyStats — Download Soccer/Football Stats CSV.
+- Link de acesso: [footystats.org](https://footystats.org/download-stats-csv) (necessita conta paga/credits). 
+- Fonte: FootyStats (plataforma proprietária com dados para 1.500+ ligas; também oferece API JSON).
+- Licença/uso: Proprietária sob Termos & Condições da FootyStats; downloads são controlados por créditos (ex.: limite típico de 100 CSV/mês por usuário, sujeito ao plano).
+
+### 2) Visão Geral
+
+- **Arquivos principais disponíveis**:
+  - `League.csv` → estatísticas agregadas por liga/temporada (~49 colunas).  
+  - `Match.csv` → resultados e estatísticas por partida (~64 colunas).  
+  - `Team.csv` → estatísticas agregadas por time (~186 colunas).  
+  - `Team_Part2.csv` → continuação de métricas de time (~442 colunas).  
+  - `Player.csv` → estatísticas individuais de jogadores (45+ colunas).  
+
+- **Total de registros**: depende do número de ligas e temporadas baixadas.  
+- **Cobertura temporal**: histórico e partidas futuras (dados em tempo real).  
+- **Contexto**: dataset robusto para análises de desempenho esportivo, previsão de resultados, modelagem de métricas avançadas (xG, odds, posse, cartões, escanteios etc.).
+
+### 3) Atributos (resumo)
+
+### League CSV (≈49 colunas)
+| Campo | Descrição | Tipo | Unidade | Exemplo |
+|-------|-----------|------|---------|---------|
+| name | Nome da liga | string | – | "Premier League" |
+| season | Temporada | string | – | "2017/2018" |
+| status | Status da temporada | string | – | "In Progress" |
+| number_of_clubs | Nº de clubes | int | qtd | 20 |
+| total_matches | Partidas agendadas | int | qtd | 380 |
+| matches_completed | Partidas concluídas | int | qtd | 250 |
+| progress | Progresso da temporada | float | % | 85.0 |
+| average_goals_per_match | Gols médios/jogo | float | gols/jogo | 2.72 |
+| average_corners_per_match | Escanteios médios/jogo | float | esc./jogo | 9.2 |
+| average_cards_per_match | Cartões médios/jogo | float | cart./jogo | 4.1 |
+| over_05_percentage ~ over_55_percentage | % de resultados Over (0.5 a 5.5) | float | % | 63.0 |
+| goals_min_0_to_10 ~ goals_min_81_to_90 | Gols por intervalo de 10 min | float | gols | 0.28 |
+| xg_avg | xG médio por jogo | float | xG | 2.75 |
+
+### Match CSV (≈64 colunas)
+| Campo | Descrição | Tipo | Unidade | Exemplo |
+|-------|-----------|------|---------|---------|
+| timestamp | Kick-off (Unix) | timestamp | epoch | 1487419800 |
+| date_GMT | Kick-off GMT | string | data/hora | "Feb 18 2017 - 9:30am" |
+| status | Estado da partida | string | – | "complete" |
+| team_a_name / team_b_name | Times (casa/fora) | string | – | "Arsenal" / "Chelsea" |
+| home_team_goal_count / away_team_goal_count | Gols | int | gols | 2 / 1 |
+| home_team_corner_count / away_team_corner_count | Escanteios | int | esc. | 7 / 5 |
+| home_team_shots / away_team_shots | Finalizações | int | – | 15 / 10 |
+| home_team_possession / away_team_possession | Posse | float | % | 56.0 / 44.0 |
+| odds_ft_home_team_win / draw / away_team_win | Odds FT | float | odds decimais | 1.85 / 3.50 / 4.20 |
+| stadium_name | Estádio | string | – | "Emirates Stadium" |
+
+### Team CSV (≈186 colunas) + Team CSV Pt.2 (≈442 colunas)
+| Campo | Descrição | Tipo | Unidade | Exemplo |
+|-------|-----------|------|---------|---------|
+| team_name / common_name | Nome do time | string | – | "Manchester City" / "Man City" |
+| season | Temporada | string | – | "2019/2020" |
+| matches_played | Partidas jogadas | int | qtd | 38 |
+| wins / draws / losses | Resultados | int | qtd | 26 / 7 / 5 |
+| goals_scored / conceded | Gols marcados/sofridos | int | gols | 102 / 35 |
+| league_position | Posição final | int | ranking | 2 |
+| average_possession | Posse média | float | % | 60.5 |
+| shots / shots_on_target | Finalizações | int | – | 580 / 240 |
+| clean_sheets | Jogos sem sofrer gol | int | qtd | 16 |
+| win_percentage | % de vitórias | float | % | 68.4 |
+| xg_for_avg / xg_against_avg | xG For/Against | float | xG | 2.1 / 0.9 |
+
+### Player CSV (45+ colunas)
+| Campo | Descrição | Tipo | Unidade | Exemplo |
+|-------|-----------|------|---------|---------|
+| full_name | Nome do jogador | string | – | "Erling Haaland" |
+| age | Idade | int | anos | 23 |
+| nationality | Nacionalidade | string | – | "Norway" |
+| current_club | Clube atual | string | – | "Man City" |
+| appearances | Jogos disputados | int | qtd | 35 |
+| goals / assists | Gols / assistências | int | – | 27 / 6 |
+| minutes_played | Minutos jogados | int | min | 2850 |
+| goals_per_90 | Gols por 90 min | float | gols/90 | 0.85 |
+| yellow_cards_overall / red_cards_overall | Cartões | int | qtd | 3 / 0 |
+| rank_in_league_top_attackers | Ranking (ataque) | int | posição | 1 |
+
+### 4) Qualidade dos Dados
+
+- **Valores faltantes**: estatísticas como *attendance*, árbitro, escanteios, cartões, posse de bola e *goal timings* podem não estar disponíveis em todas as ligas.  
+- **Temporalidade**: jogos futuros aparecem com status `incomplete` e estatísticas nulas.  
+- **Consistências internas**: checar que `matches_completed ≤ total_matches`; gols casa+fora = total; `shots_on_target ≤ shots`.  
+- **Duplicatas**: baixa probabilidade; usar chaves compostas (ex.: `league+season`, `match_id/date`, `team+season`, `player+club+season`).  
+- **Outliers**: valores extremos em escanteios/cartões são comuns em ligas menores; tratar estatisticamente.  
+- **Odds**: armazenadas em formato decimal; converter para probabilidade quando necessário.  
+- **Cobertura**: embora ampla (1.500+ ligas), a granularidade varia bastante por competição.  
+
+### 5) Chaves Técnicas Recomendadas
+- **League**: `league_name + season`  
+- **Match**: `timestamp + team_a_name + team_b_name`  
+- **Team**: `team_name + season`  
+- **Player**: `full_name + current_club + season`  
 
 # Canvas analítico
 
