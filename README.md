@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Previsão e Análise de Jogos de Futebol em uma Liga Completa
 
 `CURSO: Sistemas de Informação`
 
@@ -6,20 +6,36 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Este projeto utiliza **dados reais de ligas de futebol** (partidas, equipes e jogadores) para aplicar **Modelos de Machine Learning** em três frentes:
+
+- **Regressão** → prever o número total de gols em uma partida
+- **Classificação** → prever o resultado (vitória, empate ou derrota)  
+- **Clusterização** → identificar perfis de times com estilos de jogo semelhantes  
+
+## Objetivo
+Transformar estatísticas esportivas em **insights preditivos**, demonstrando como a ciência de dados pode apoiar **clubes, analistas e torcedores** na compreensão e previsão de resultados no futebol.
+
+## Tecnologias
+- Python (Pandas, Scikit-Learn, XGBoost, etc.)  
+- Google Colab  
+- HTML, CSS e JS para aplicação simples de simulação 
+
+## Impacto
+O projeto conecta **inteligência artificial e esporte**, permitindo explorar dados de forma prática e gerar previsões que podem auxiliar em análises técnicas, estratégias de jogo e estudos acadêmicos.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Arthur Andrade de Oliveira
+* Lucas Borges Silva
+* Gabriel Vilhena Magri
+* Ian Faria Chamone
+* Raphaela Tamietto Rios
+* Iyan Lucas Duarte Marques
+* Guilherme Pereira Carneiro
 
 ## Orientador
 
-* Nome completo do professor 1
+* Neil Paiva Tizzo
 
 # Planejamento
 
