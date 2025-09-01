@@ -94,41 +94,66 @@ O objetivo aqui não é definir clientes específicos ou papéis exatos dentro d
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
-## Estado da arte
+## Estado da Arte
 
-Nesta seção, descreva abordagens da literatura que tratam problemas semelhantes ao seu. Seu objetivo é documentar métodos, dados, métricas e resultados.
+Nesta seção, descrevemos abordagens da literatura que tratam de problemas semelhantes à previsão de resultados e análise de estilos táticos no futebol. O objetivo é documentar os métodos, dados, métricas e resultados de 2 trabalhos relevantes, publicados nos últimos anos, para contextualizar e fundamentar nosso projeto.
 
-### O que levantar (mínimo 5 trabalhos)
-Para **cada estudo encontrado** aderente à temática do grupo, registre de forma objetiva:
-* Problema e contexto: que problema o trabalho buscou resolver e em qual domínio/cenário foi aplicado.
-* Dados (dataset): origem, tamanho, período, variáveis/atributos, pré-processamentos relevantes (faltantes, balanceamento, normalização).
-* Abordagem/algoritmos: algoritmos utilizados e parâmetros principais (quando informados).
-* Métricas de avaliação: quais e por quê (ex.: Acurácia, F1, AUC, RMSE, MAE, etc.).
-* Resultados: principais números, comparações internas, limitações citadas e conclusões.
+### Levantamento de Trabalhos
 
-* Texto-síntese crítico (2–4 parágrafos) respondendo:
-- O que os estudos concordam? Onde divergem?
-- Quais lacunas permanecem (dados, métricas, cenários, limitações técnicas/éticas)?
-- Como seu projeto se alinha aos estudos identificados?
+---
 
-**Dica:** Prefira artigos dos últimos 5 anos ou referências clássicas indispensáveis.
+#### Trabalho 1: Previsão de Resultados com Foco em Classificação e Rentabilidade
 
-### Ferramentas inteligentes permitidas
-Você pode utilizar: Perplexity, SciSpace, Elicit, Research Rabbit, Litmaps.
-Use-as para descoberta, organização e triagem de literatura. 
+*   **Referência Completa:** Choi, B. S., Foo, L. K., & Chua, S. L. (2023). *Predicting Football Match Outcomes with Machine Learning Approaches*. MENDEL, 29(1), 93-99.
+*   **DOI/URL:** [`https://doi.org/10.13164/mendel.2023.1.093`](https://doi.org/10.13164/mendel.2023.1.093 )
 
-**Atenção:** 
-* Sempre acesse a fonte original (PDF/artigo) antes de citar; verifique números e conclusões.
-* Registre DOI/URL oficial e dados bibliográficos completos.
-* Evite “alucinações” das ferramentas: desconfie de referências sem DOI ou que você não consiga localizar oficialmente.
-* Use as ferramentas inteligentes para mapear redes de citação (Research Rabbit), mapas de tópicos (Litmaps), filtrar por período e gerar resumos iniciais (Perplexity/SciSpace/Elicit).
-* Leia os trabalhos mais promissores e descarte estudos fora de escopo.
+*   **Problema e Contexto:** O trabalho buscou prever o resultado de partidas (vitória, empate ou derrota) da English Premier League (EPL), um dos campeonatos mais competitivos e ricos em dados do mundo. O diferencial foi avaliar não apenas a acurácia dos modelos, mas também sua performance em um cenário de simulação de apostas, testando o impacto de diferentes técnicas de balanceamento de dados.
+*   **Dados (Dataset):**
+    *   **Origem:** Dados da temporada 2022-2023 da English Premier League (EPL).
+    *   **Variáveis/Atributos:** O estudo não detalha todas as features, mas foca em estatísticas históricas de desempenho das equipes.
+    *   **Pré-processamentos:** O ponto central do estudo foi o teste de diferentes técnicas de amostragem para lidar com o desbalanceamento de classes (menos empates que vitórias/derrotas), como SMOTE (*Synthetic Minority Over-sampling Technique*).
+*   **Abordagem/Algoritmos:**
+    *   **Classificação (Resultado do Jogo):** Foram comparados quatro algoritmos: Random Forest, Regressão Logística, Linear Support Vector Classifier (SVC) e XGBoost.
+*   **Métricas de Avaliação:**
+    *   **Acurácia:** Para medir o percentual de previsões corretas.
+    *   **Lucro Simulado:** Uma métrica prática para avaliar o retorno financeiro das previsões em um cenário de apostas.
+*   **Resultados:**
+    *   O **Random Forest** (em classificação binária) alcançou a maior acurácia.
+    *   A **Regressão Logística** (também binária) gerou o maior lucro na simulação de apostas, indicando que a melhor acurácia nem sempre se traduz em maior rentabilidade.
+    *   A principal conclusão foi que o uso de técnicas de amostragem para balancear o dataset melhorou significativamente o desempenho dos modelos.
 
-> **Links Úteis**:
-> - [Google Scholar](https://scholar.google.com/)
-> - [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
-> - [Science Direct](https://www.sciencedirect.com/)
-> - [ACM Digital Library](https://dl.acm.org/)
+---
+
+#### Trabalho 2: Clusterização para Identificar Estilos de Jogo de Times
+
+*   **Referência Completa:** Plakias, S., et al. (2024). *Cluster Analysis on Football Teams Performance Data*. DiVA portal.
+*   **DOI/URL:** [`http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-202299`](http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-202299 )
+
+*   **Problema e Contexto:** O trabalho utilizou aprendizado não supervisionado para resolver um problema de análise tática: agrupar times de futebol em clusters que representem "estilos de jogo" distintos. O estudo foi aplicado às cinco principais ligas europeias na temporada 2022-23.
+*   **Dados (Dataset):**
+    *   **Origem:** Dados de desempenho de times das ligas da Itália, Alemanha, França, Espanha e Inglaterra na temporada 2022-23.
+    *   **Variáveis/Atributos:** Métricas de desempenho que refletem táticas, como posse de bola, tipos de passe, pressão defensiva, xG (*Gols Esperados*), etc.
+    *   **Pré-processamentos:** Normalização dos dados para que as diferentes escalas das variáveis não distorcessem o cálculo de distância.
+*   **Abordagem/Algoritmos:**
+    *   **Clusterização:** O método principal foi a **Clusterização Hierárquica Aglomerativa**, usando a distância Euclidiana e o algoritmo de Ward para calcular a junção dos clusters.
+    *   **Visualização:** Análise de Componentes Principais (PCA) foi usada para reduzir a dimensionalidade e visualizar os clusters em um gráfico 2D.
+*   **Métricas de Avaliação:**
+    *   **Métricas Internas:** Métricas como o coeficiente de silhueta (*Silhouette Score*) foram usadas para ajudar a determinar o número ideal de clusters.
+*   **Resultados:**
+    *   A análise apontou para a existência de **dois clusters principais** nos dados.
+    *   O primeiro cluster era mais coeso e continha quase que exclusivamente os times de elite (ex: Manchester City, Real Madrid), caracterizados por alta posse de bola e domínio ofensivo.
+    *   O segundo cluster era maior e mais difuso, agrupando os demais times com estilos mais variados e menos dominantes.
+
+---
+
+### Texto-Síntese Crítico
+
+As pesquisas que examinamos, mesmo que abordem diferentes objetivos de aprendizado de máquina, convergem em relação à utilidade de usar modelos computacionais para obter informações relevantes sobre futebol. Ambos os estudos são unânimes em afirmar que a qualidade dos dados e a forma como são preparados são etapas essenciais. O estudo de Choi et al. (2023) ressalta como é importante equilibrar as classes para tarefas de classificação, enquanto Plakias et al. (2024) realça a importância de normalizar as características para algoritmos de agrupamento que se baseiam na distância. Isso demonstra que, independentemente da tarefa (seja supervisionada ou não), o preparo dos dados é crucial para um bom resultado.
+
+É natural que as abordagens tomem rumos diferentes, considerando seus objetivos: uma se concentra em previsão (classificação), e a outra, em identificar padrões (agrupamento). A primeira busca um resultado direto e que pode ser medido (prever quem vai vencer), enquanto a segunda almeja um entendimento mais amplo e estratégico (identificar diferentes estilos de jogo). Uma questão ainda pendente é a junção dessas duas áreas. Os perfis táticos descobertos pelo agrupamento poderiam ser aproveitados como um dado valioso nos modelos de previsão, mas as pesquisas geralmente tratam essas análises de maneira separada. Além disso, ambos os estudos utilizam dados reunidos por temporada ou partida, negligenciando informações contextuais relevantes, como lesões, o estado emocional da equipe ou táticas específicas para cada adversário.
+
+Nosso projeto está alinhado a essa situação atual, ao sugerir uma abordagem que une diferentes aspectos. Pretendemos executar as três tarefas (regressão, classificação e agrupamento) de maneira integrada, utilizando a mesma base de dados. Isso nos coloca em uma posição vantajosa para solucionar a lacuna identificada: poderemos, por exemplo, empregar os agrupamentos de estilos táticos como um novo dado para os modelos de previsão de gols e resultados, verificando se essa informação estratégica aprimora a capacidade de previsão. Assim, nosso trabalho não só reproduz as técnicas já existentes, mas também as conecta, resultando em uma análise mais abrangente e que gera mais valor sobre o desempenho no futebol.
+
 
 # Descrição do _dataset_ selecionado
 
