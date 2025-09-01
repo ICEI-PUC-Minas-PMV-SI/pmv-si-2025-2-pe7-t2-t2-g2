@@ -1,6 +1,16 @@
 # Introdução
 
-Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
+O futebol contemporâneo deixou de ser um domínio exclusivo da intuição para se tornar uma arena amplamente orientada por dados. A cada partida, um volume massivo de informações estatísticas é gerado, criando um "oceano" de dados que contém padrões valiosos sobre desempenho tático e técnico. O principal desafio, no entanto, é transformar esse grande volume de informação bruta em conhecimento estratégico. Atualmente, a capacidade de realizar análises preditivas avançadas é um diferencial competitivo, muitas vezes limitado a clubes com grandes orçamentos. Este projeto se propõe a explorar esse cenário, aplicando a ciência de dados para demonstrar como é possível modelar, prever e classificar resultados e comportamentos em campo a partir de dados abertos.
+
+Para materializar esse objetivo, o projeto foca na aplicação prática de três técnicas de Machine Learning, cada uma abordando uma questão fundamental da análise esportiva. A execução será conduzida utilizando Python e bibliotecas consolidadas como Pandas e Scikit-Learn, com o objetivo de construir modelos robustos para:
+
+Regressão: Estimar o número total de gols em uma partida, oferecendo uma medida quantitativa do potencial ofensivo do confronto.
+
+Classificação: Prever o resultado mais provável de um jogo (vitória do time da casa, empate ou derrota), aplicando uma abordagem estatística a um dos maiores desafios do esporte.
+
+Clusterização: Identificar perfis de equipes com estilos de jogo similares, agrupando-as com base em suas métricas de desempenho para revelar semelhanças táticas.
+
+O resultado final deste trabalho é uma ferramenta de análise preditiva funcional, projetada para ser útil a um público diversificado. O projeto oferece valor estratégico para equipes técnicas e analistas na preparação para partidas, enriquece o trabalho da mídia esportiva com insights baseados em dados, e serve como um estudo de caso prático para estudantes e pesquisadores. Ao final, o objetivo é demonstrar de forma clara e objetiva o impacto da ciência de dados na geração de inteligência competitiva e no aprofundamento da compreensão estratégica do esporte.
 
 ## Problema
 
