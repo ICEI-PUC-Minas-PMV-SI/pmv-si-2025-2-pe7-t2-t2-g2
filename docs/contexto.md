@@ -43,19 +43,19 @@ Objetivo Geral
 
 Experimentar e avaliar modelos de aprendizado de máquina para previsão e análise de partidas de futebol, visando identificar as abordagens mais eficazes para:
 
-*estimar o número de gols por jogo,
+* estimar o número de gols por jogo,
 
-*classificar o resultado da partida (vitória, empate ou derrota) e
+* classificar o resultado da partida (vitória, empate ou derrota) e
 
-*agrupar os clubes em perfis táticos de desempenho.
+* agrupar os clubes em perfis táticos de desempenho.
 
 Objetivos Específicos
 
-*Aplicar modelos de regressão (Regressão Linear, Random Forest Regressor e XGBoost) para estimar o número esperado de gols em cada partida, utilizando métricas como RMSE e R² para avaliar o desempenho.
+* Aplicar modelos de regressão (Regressão Linear, Random Forest Regressor e XGBoost) para estimar o número esperado de gols em cada partida, utilizando métricas como RMSE e R² para avaliar o desempenho.
 
-*Comparar diferentes modelos de classificação supervisionada (Regressão Logística, Random Forest Classifier e XGBoost) para prever o desfecho de cada jogo, analisando métricas como acurácia, precisão, recall e F1-score.
+* Comparar diferentes modelos de classificação supervisionada (Regressão Logística, Random Forest Classifier e XGBoost) para prever o desfecho de cada jogo, analisando métricas como acurácia, precisão, recall e F1-score.
 
-*Explorar algoritmos de clusterização (K-Means, DBSCAN, HDBSCAN) para identificar padrões e agrupar os clubes em perfis táticos (ofensivo, defensivo, equilibrado), avaliando a qualidade dos agrupamentos por meio de métricas como Silhouette Score.
+* Explorar algoritmos de clusterização (K-Means, DBSCAN, HDBSCAN) para identificar padrões e agrupar os clubes em perfis táticos (ofensivo, defensivo, equilibrado), avaliando a qualidade dos agrupamentos por meio de métricas como Silhouette Score.
 
 Otimizar os hiperparâmetros dos modelos selecionados a fim de melhorar as métricas de desempenho e maximizar a capacidade preditiva e explicativa das análises.
 
@@ -73,21 +73,47 @@ No âmbito social e econômico, o impacto é igualmente relevante. A análise de
 
 ## Público-Alvo
 
-Nesta seção, descreva quem poderá se beneficiar com a sua investigação, apresentando os diferentes perfis de pessoas ou grupos impactados.
+O projeto destina-se a atender um público variado, que atua no ecossistema do futebol e tem interesse em utilizar dados e inteligência artificial para melhorar processos de análise, tomada de decisão e engajamento.
 
-O objetivo aqui não é definir clientes específicos ou papéis exatos dentro da aplicação, mas sim compreender o perfil dos usuários e partes interessadas. Para isso, considere:
-* Conhecimentos prévios relacionados ao domínio do problema e ao uso de tecnologia;
-* Nível de familiaridade com recursos digitais e possíveis barreiras de uso;
-* Contexto profissional e hierárquico, quando aplicável (ex.: nível de decisão, responsabilidades, área de atuação);
-* Necessidades e expectativas que podem ser atendidas pelo projeto.
+1. Estudantes e Pesquisadores de Ciência de Dados e Esporte
 
-**Dica:** Seja objetivo e baseie suas descrições em informações reais ou plausíveis para o contexto escolhido. Isso ajudará a manter o foco no desenvolvimento de soluções relevantes e aplicáveis.
+* Conhecimento prévio: Noções de estatística, aprendizado de máquina e/ou análise esportiva.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+* Necessidades: Conjunto de dados robusto e estruturado para aplicação de técnicas de regressão, classificação e clusterização.
+
+* Expectativa: Poder utilizar o projeto como estudo de caso para validar hipóteses, desenvolver artigos científicos e aplicar metodologias de previsão em cenários reais.
+
+2. Analistas de Desempenho e Profissionais de Clubes
+
+* Conhecimento prévio: Entendem métricas de futebol, táticas e indicadores de performance.
+
+* Necessidades: Ferramentas que auxiliem na previsão de resultados, identificação de padrões táticos e avaliação de desempenho de equipes.
+
+* Expectativa: Obter insights que possam embasar estratégias de treinamento, contratações e ajustes táticos.
+
+3. Gestores e Tomadores de Decisão no Esporte
+
+* Conhecimento prévio: Visão estratégica do negócio, mas nem sempre profundidade técnica em estatística ou IA.
+
+* Necessidades: Relatórios claros e objetivos que facilitem decisões sobre investimento, contratações ou marketing esportivo.
+
+* Expectativa: Ter acesso a indicadores consolidados que reduzam o risco em negociações e investimentos no clube.
+
+4. Empresas de Mídia e Casas de Apostas
+
+* Conhecimento prévio: Uso avançado de estatísticas para gerar conteúdo e odds.
+
+* Necessidades: Modelos preditivos que aumentem o engajamento do público e melhorem a precificação de apostas.
+
+* Expectativa: Obter previsões com maior acurácia para gerar narrativas interessantes e atrair apostadores.
+
+5. Torcedores e Entusiastas de Futebol
+
+* Conhecimento prévio: Baixo a médio, mais interessados no aspecto lúdico do esporte.
+
+* Necessidades: Informação de fácil interpretação, gráficos e estatísticas que aumentem a experiência de acompanhar o campeonato.
+
+* Expectativa: Acessar previsões de resultados e análises de desempenho para acompanhar o campeonato de forma mais interativa.
 
 ## Estado da Arte
 
