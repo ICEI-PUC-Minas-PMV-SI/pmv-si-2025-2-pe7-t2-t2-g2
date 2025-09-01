@@ -61,20 +61,15 @@ Otimizar os hiperparâmetros dos modelos selecionados a fim de melhorar as métr
 
 ## Justificativa
 
-Nesta seção, apresente a importância e a motivação para trabalhar com o conjunto de dados escolhido. Explique por que esse dataset é relevante e como ele se conecta ao problema identificado anteriormente.
+O futebol é um dos esportes mais populares do mundo e movimenta uma das maiores indústrias globais de entretenimento e apostas. Segundo a FIFA (2023), mais de 5 bilhões de pessoas acompanharam a Copa do Mundo do Catar, evidenciando o alcance social e econômico desse esporte. No Brasil, país considerado o maior mercado de futebol da América Latina, a CBF reportou que o Campeonato Brasileiro gerou mais de R$ 1,3 bilhão em receitas apenas em 2022, entre direitos de transmissão, patrocínios e bilheterias. Esse volume de recursos mostra como pequenas melhorias em desempenho, análise de dados ou previsão de resultados podem gerar impactos significativos para clubes, investidores, casas de apostas e torcedores.
 
-Indique:
-* Razões para a escolha dos objetivos específicos – Justifique por que decidiu aprofundar sua investigação nessas metas, relacionando-as ao potencial de solução ou melhoria para o problema.
-* Relevância do estudo do problema – Mostre a importância de compreender e tratar a questão apresentada, tanto no contexto acadêmico quanto no profissional.
-* Impacto social, econômico ou ambiental – Descreva como o problema afeta a sociedade ou um setor específico, buscando sempre quantificar o impacto por meio de dados reais.
+A escolha do conjunto de dados de partidas, clubes e jogadores de diferentes temporadas é estratégica, pois reúne informações ricas e multidimensionais (estatísticas de jogo, indicadores de desempenho coletivo, métricas individuais). Isso possibilita a aplicação de técnicas de aprendizado de máquina tanto em problemas de regressão (estimativa de gols), quanto de classificação (resultado da partida) e clusterização (perfis táticos de clubes). Dessa forma, cobre três áreas centrais da ciência de dados aplicada ao esporte: previsão de eventos, categorização de desfechos e descoberta de padrões ocultos.
 
-**Importante:**
-* Apresente números, estatísticas e informações concretas, citando as fontes (relatórios, artigos científicos, portais oficiais etc.).
-* Mantenha a objetividade e a clareza, evitando argumentos genéricos.
-* Construa um texto coeso que conecte o problema, os objetivos e a relevância do trabalho.
+A decisão de aprofundar nos objetivos específicos está ligada ao potencial de solução de problemas reais enfrentados por analistas esportivos e gestores de clubes. A previsão do número de gols pode auxiliar em estratégias de jogo, avaliação de desempenho ofensivo/defensivo e até em modelos de precificação para apostas esportivas, setor que movimentou mais de R$ 7 bilhões no Brasil em 2023 (IBGE/Agência Brasil). Já a classificação do resultado de uma partida tem aplicações diretas em simulações de campeonatos, previsão de pontos e probabilidade de títulos. Por sua vez, a clusterização de clubes em perfis táticos permite identificar tendências estratégicas, auxiliar treinadores na análise de adversários e melhorar processos de scouting de atletas compatíveis com cada estilo de jogo.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Do ponto de vista acadêmico, este estudo contribui para demonstrar a aplicabilidade de algoritmos de aprendizado de máquina em contextos reais, com bases volumosas e variáveis complexas. A utilização de métricas robustas (RMSE, R², F1-score, Silhouette) garante rigor na avaliação dos modelos, fortalecendo a validade científica do trabalho. Além disso, a otimização de hiperparâmetros acrescenta valor ao experimento, pois busca maximizar a capacidade preditiva e explicativa das análises.
+
+No âmbito social e econômico, o impacto é igualmente relevante. A análise de dados esportivos pode ajudar clubes com menor orçamento a otimizar decisões táticas, reduzindo desigualdades competitivas. Também fornece subsídios para narrativas jornalísticas mais embasadas e para maior engajamento do torcedor. Assim, o projeto não apenas avança em termos técnicos e metodológicos, mas também gera benefícios concretos em setores-chave da sociedade que orbitam o futebol.
 
 ## Público-Alvo
 
