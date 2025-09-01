@@ -29,22 +29,25 @@ O papel da questão de pesquisa é guiar todas as etapas do projeto — desde a 
 
 ## Objetivos preliminares
 
-Nesta seção, você deve apresentar os objetivos preliminares do trabalho, deixando claro que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema descrito anteriormente.
+Objetivo Geral
 
-Além do objetivo geral, é importante definir pelo menos dois objetivos específicos, que direcionem a investigação de acordo com o foco que o grupo pretende adotar. Esses objetivos específicos podem envolver: 
-* Explorar um determinado tipo de modelagem ou técnica de aprendizado de máquina;
-* Comparar diferentes abordagens para resolver o mesmo problema;
-* Aplicar o modelo em um cenário real ou simulado;
-* Otimizar parâmetros para melhorar métricas específicas de desempenho.
+Experimentar e avaliar modelos de aprendizado de máquina para previsão e análise de partidas de futebol, visando identificar as abordagens mais eficazes para:
 
-Exemplo:
-Objetivo específico 1: Predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma janela de tempo definida.
-Objetivo específico 2: Estimar o valor exato da ação ao final do período analisado.
+*estimar o número de gols por jogo,
 
-**Importante:** À medida que a pesquisa/experimentação avança, os objetivos podem ser ajustados ou refinados. Mantenha essa seção atualizada no repositório para refletir o andamento e as novas decisões do projeto.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+*classificar o resultado da partida (vitória, empate ou derrota) e
+
+*agrupar os clubes em perfis táticos de desempenho.
+
+Objetivos Específicos
+
+*Aplicar modelos de regressão (Regressão Linear, Random Forest Regressor e XGBoost) para estimar o número esperado de gols em cada partida, utilizando métricas como RMSE e R² para avaliar o desempenho.
+
+*Comparar diferentes modelos de classificação supervisionada (Regressão Logística, Random Forest Classifier e XGBoost) para prever o desfecho de cada jogo, analisando métricas como acurácia, precisão, recall e F1-score.
+
+*Explorar algoritmos de clusterização (K-Means, DBSCAN, HDBSCAN) para identificar padrões e agrupar os clubes em perfis táticos (ofensivo, defensivo, equilibrado), avaliando a qualidade dos agrupamentos por meio de métricas como Silhouette Score.
+
+Otimizar os hiperparâmetros dos modelos selecionados a fim de melhorar as métricas de desempenho e maximizar a capacidade preditiva e explicativa das análises.
 
 ## Justificativa
 
