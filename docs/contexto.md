@@ -280,56 +280,50 @@ Nosso projeto está alinhado a essa situação atual, ao sugerir uma abordagem q
 
 # Canvas analítico
 
-1. Question (Pergunta Central)
-
+### 1. Question (Pergunta Central)
 - Como prever o desempenho de jogadores e equipes em partidas futuras?
 - Quais fatores mais influenciam vitórias, derrotas e empates?
 - Como identificar talentos ou riscos de lesão?
 
-2. Data Sources (Fontes de Dados)
-
+### 2. Data Sources (Fontes de Dados)
 - Estatísticas de partidas (posse, finalizações, passes, desarmes).
 - Dados físicos (aceleração, distância percorrida, velocidade).
 - Dados de contexto (clima, estádio, mando de campo, torcida).
 - Dados históricos (resultados passados, desempenho por temporada).
 - Dados de scouting e mercado (valor de jogador, idade, posição).
 
-3. Heuristics (Heurísticas/Suposições)
+### 3. Heuristics (Heurísticas/Suposições)
 - Nem todos os fatores têm o mesmo peso (ex.: posse ≠ vitória).
 - Jogadores com performance consistente têm maior probabilidade de manter padrão.
 - Lesões passadas aumentam risco futuro.
 - O fator casa influencia fortemente os resultados.
 
-4. Validation (Validação)
-
+### 4. Validation (Validação)
 - Testes com dados históricos para medir precisão dos modelos.
 - Comparação entre previsão e resultado real.
 - Feedback de treinadores e analistas para validar insights.
 - Visualização em dashboards (mapas de calor, gráficos de desempenho).
 
-5. Implementation (Implementação)
-
+### 5. Implementation (Implementação)
 - Coleta automática dos dados (via sensores, APIs, bancos de dados de jogos).
 - Limpeza e tratamento dos dados.
 - Treinamento de modelos de machine learning (regressão, árvores, redes neurais).
 - Testes com validação cruzada.
 - Deploy do modelo em ambiente de análise ou aplicativo para comissão técnica.
 
-6. Results (Resultados Esperados)
-
+### 6. Results (Resultados Esperados)
 - Previsões de resultado de jogos com base em dados históricos.
 - Identificação de jogadores-chave para cada partida.
 - Insights sobre condicionamento físico e risco de lesão.
 - Apoio à tomada de decisão em escalações e contratações.
 
-7. Next Steps (Próximos Passos)
-
+### 7. Next Steps (Próximos Passos)
 - Refinar o modelo com dados em tempo real.
 - Incorporar visão computacional (ex.: análise de vídeos de jogos).
 - Expandir para previsão de mercado (valorização de atletas).
 - Integração com ferramentas de gestão esportiva para tomada de decisão.
 
-![alt text](analytic-canva.png)
+![Canvas analítico](docs/img/analytic-canva.png)
 
 **Dica:** O Canvas Analítico serve como guia visual para alinhar expectativas e direcionar o desenvolvimento. Ele poderá (e deverá) ser revisitado e atualizado ao longo do projeto.
 
