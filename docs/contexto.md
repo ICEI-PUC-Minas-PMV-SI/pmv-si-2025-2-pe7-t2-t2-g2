@@ -164,6 +164,75 @@ Nesta seção, descrevemos abordagens da literatura que tratam de problemas seme
     *   A análise apontou para a existência de **dois clusters principais** nos dados.
     *   O primeiro cluster era mais coeso e continha quase que exclusivamente os times de elite (ex: Manchester City, Real Madrid), caracterizados por alta posse de bola e domínio ofensivo.
     *   O segundo cluster era maior e mais difuso, agrupando os demais times com estilos mais variados e menos dominantes.
+ ---
+ #### Trabalho 3: Análise preditiva e modelagem de resultados de futebol usando abordagem de aprendizado de máquina para a Premier League
+
+*   **Referência Completa:** Baboota. (2019). *Predictive analysis and modelling football results using machine learning approach for English Premier League*.
+*   **DOI/URL:** [https://doi.org/10.1016/j.ijforecast.2018.01.003.](https://doi.org/10.1016/j.ijforecast.2018.01.003.)
+*   **Problema e Contexto:** O estudo aborda a previsão de resultados da English Premier League (EPL) usando aprendizado de máquina. O desafio principal é a natureza altamente competitiva e imprevisível do futebol, onde surpresas (upsets) são comuns (ex.: vitória do Leicester City em 2016). O problema é       tratado como uma classificação multiclasse (Vitória do mandante, Vitória do visitante, Empate) e tem grande relevância econômica, já que o mercado de apostas em futebol movimenta até 1 trilhão de dólares.
+*   **Dados (Dataset):**
+    *   **Origem:** Football UK, cobrindo 11 temporadas (2005–2016).
+    *   **Variáveis/Atributos:** 33 atributos no total, como Goal Difference (GD), Corners, Shots on Target, Goals (médias dos últimos k jogos), Streak e Weighted Streak e Form.
+    *   **Pré-processamentos:** Normalização dos dados para que as diferentes escalas das variáveis não distorcessem o cálculo de distância.
+*   **Abordagem/Algoritmos:**
+    *   **Gaussian Naïve Bayes**
+    *   **Support Vector Machines (SVM)**: kernel linear e RBF, com otimização de hiperparâmetros (C, Gamma).
+    *   **Random Forest**: otimização de número de árvores, profundidade e critério de divisão (melhor com Gini Index).
+    *   **Gradient Boosting (XGBoost)**: com grid search para hiperparâmetros como learning rate, gamma, lambda, max depth.
+*   **Métricas de Avaliação:**
+    *   **Ranked Probability Score (RPS)**.
+    *   Matriz de confusão, precisão, recall e F1-score para cada classe (vitória casa, vitória visitante, empate).
+    *   Comparação com odds de casas de apostas (Bet365 e Pinnacle Sports).
+*   **Resultados:**
+    *   O trabalho mostra que feature engineering detalhada e modelos como Gradient Boosting conseguem prever resultados da EPL com boa precisão, especialmente vitórias em casa. Porém, ainda não superam as casas de apostas, que têm acesso a informações adicionais (lesões, escalações, etc.).
+---
+ #### Trabalho 4: A regra dura dos gols: indicadores de desempenho baseados em dados para times de futebol
+
+*   **Referência Completa:** Cintia, Paolo & Pappalardo, Luca & Pedreschi, Dino & Giannotti, Fosca & Malvaldi, Marco. (2015). *The harsh rule of the goals: Data-driven performance indicators for football teams.* 
+*   **DOI/URL:** [10.1109/DSAA.2015.7344823](https://www.researchgate.net/publication/281318318_The_harsh_rule_of_the_goals_Data-driven_performance_indicators_for_football_teams)
+*   **Problema e Contexto:** O artigo aborda a limitação dos indicadores tradicionais no futebol, que apesar da disponibilidade de grandes volumes de dados (via sensores, câmeras e empresas como Opta e ProZone), ainda não fornecem um repertório consolidado de métricas para avaliar o desempenho coletivo. O objetivo é propor indicadores simples, baseados em passes, que permitam medir e até prever o sucesso de equipes em campeonatos inteiros.
+*   **Dados (Dataset):**
+    *   **Origem:** Jogos das quatro principais ligas europeias (Alemanha, Inglaterra, Espanha e Itália) na temporada 2013/2014.
+    *   **Variáveis/Atributos:** Jogador, posição inicial e final no campo, resultado (sucesso/fracasso), etc.
+    *   **Pré-processamentos:** Normalização dos dados para que as diferentes escalas das variáveis não distorcessem o cálculo de distância.
+*   **Abordagem/Algoritmos:**
+    *   **Definição de indicadores baseados em passes**
+    *   **Construção de redes de passes (entre jogadores e zonas)**
+    *   **Simulação de campeonatos inteiros substituindo resultados reais (vitória/empate/derrota) por previsões baseadas nos indicadores.**
+    *   **Criação de classificadores para prever o resultado de jogos com base no histórico dos indicadores.**
+    *   **Pezzali score** (taxa de eficiência ataque/defesa).
+*   **Métricas de Avaliação:**
+    *   **Correlação de Pearson**.
+    *   Comparação entre classificações reais e simuladas (coeficiente de correlação ~0,9 em alguns casos, como na Bundesliga).
+    *   Avaliação da precisão de classificadores para prever resultados de jogos.
+*   **Resultados:**
+    *   Simulações dos campeonatos reproduzem com boa aproximação as tabelas finais, especialmente no topo da classificação.
+    *   Times de elite (Real Madrid, Bayern, Barcelona, Manchester City, Juventus) aparecem no topo do ranking pelo H indicator.
+    *   Times com discrepâncias nas previsões apresentam valores extremos no Pezzali score.
+    *   O estudo mostra que mesmo indicadores simples podem prever e explicar grande parte do sucesso de equipes, sugerindo o potencial de análises complexas de redes e sistemas dinâmicos no futebol.
+---
+ #### Trabalho 5: Uma abordagem baseada em rede para avaliar o desempenho de times de futebol
+ 
+*   **Referência Completa:** Cintia, Paolo & Rinzivillo, Salvatore & Pappalardo, Luca. (2015). *A network-based approach to evaluate the performance of football teams.*
+*   **DOI/URL:** [https://www.researchgate.net/publication/280520469_A_network-based_approach_to_evaluate_the_performance_of_football_teams](https://www.researchgate.net/publication/280520469_A_network-based_approach_to_evaluate_the_performance_of_football_teams)
+*   **Problema e Contexto:** O trabalho parte da evolução das tecnologias de sensoriamento em partidas de futebol, que permitem extrair dados detalhados de eventos em campo (passes, assistências, finalizações etc.). Os métodos tradicionais de avaliação de desempenho de times utilizam histórico de vitórias, derrotas ou rankings oficiais. O artigo propõe uma abordagem alternativa: avaliar a performance de um time observando seu comportamento em campo por meio de redes de passes, em vez de apenas dados históricos.
+*   **Dados (Dataset):**
+    *   **Origem:** FIFA World Cup 2014 e Serie A italiana 2013/2014
+    *   **Variáveis/Atributos:** Cada partida é descrita por uma sequência de eventos com informações como: jogador envolvido, timestamp, posição inicial e final da bola, tipo de evento (passe, cruzamento, finalização, assistência etc.), resultado (completo ou falhado). Os passes representam cerca de 80% dos eventos, sendo a base para os modelos de rede.
+    *   **Pré-processamentos:** Normalização dos dados para que as diferentes escalas das variáveis não distorcessem o cálculo de distância.
+*   **Abordagem/Algoritmos:**
+    *   **Modelagem em Redes** Rede de jogadores: nós = jogadores; arestas = passes entre jogadores. Rede de zonas: nós = zonas do campo (100 células); arestas = passes entre zonas.
+    *   **Métricas de Rede para descrever desempenho** Média dos graus (µ) → volume de jogo (número de passes). Desvio padrão dos graus (σ) → heterogeneidade/diversidade de jogo. Média harmônica (H) entre µ e σ → indicador combinado.
+    *   **Predição de partidas** Cálculo das métricas suavizadas exponencialmente com base em jogos passados. Simulação do resultado da partida comparando indicadores dos dois times.
+*   **Métricas de Avaliação:**
+    *   **Modelo aleatório (48-26-26)**
+    *   **Modelo baseado em ranking**
+*   **Resultados:**
+    *   **Serie A 2013/2014** O modelo proposto (rede de jogadores com indicador H) obteve 53% de acerto, superando o ranking (48%) e o modelo aleatório (30%).
+    *   **FIFA World Cup 2014** O modelo proposto teve desempenho inferior ao ranking (36% vs. 51%), mas ainda acima do modelo aleatório (31%).
+    *   A abordagem é mais eficaz em competições longas e regulares (como a liga italiana) do que em torneios curtos (como a Copa do Mundo).
+---
+
 
 ---
 
