@@ -323,7 +323,7 @@ Nosso projeto está alinhado a essa situação atual, ao sugerir uma abordagem q
 - Expandir para previsão de mercado (valorização de atletas).
 - Integração com ferramentas de gestão esportiva para tomada de decisão.
 
-![Canvas analítico](docs/img/analytic-canva.png)
+![Canvas analítico](./img/analytic-canva.png)
 
 **Dica:** O Canvas Analítico serve como guia visual para alinhar expectativas e direcionar o desenvolvimento. Ele poderá (e deverá) ser revisitado e atualizado ao longo do projeto.
 
