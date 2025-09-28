@@ -14,28 +14,35 @@ O resultado final deste trabalho é uma ferramenta de análise preditiva funcion
 
 ## Problema
 
-Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
+O futebol moderno é uma indústria rica em dados, onde estatísticas detalhadas são capturadas para cada ação em campo. No entanto, a simples coleta desses dados não se traduz automaticamente em inteligência competitiva. O problema central que esta pesquisa busca resolver é a dificuldade em transformar dados brutos de partidas em insights preditivos e estratégicos que sejam confiáveis e acessíveis. Atualmente, a análise avançada é um recurso de alto custo, criando uma disparidade informacional onde clubes e analistas com menos recursos têm dificuldade em competir no nível analítico com as grandes potências do esporte.
 
-Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Esta dificuldade geral se manifesta em desafios mais específicos que afetam diretamente a preparação e a análise de uma partida. Nosso projeto se concentra em abordar três lacunas principais:
 
-**Atenção:** Nesta etapa, apresente apenas informações reais e já confirmadas. Não antecipe requisitos técnicos detalhados, funcionalidades específicas ou desenhos de projeto — essa parte será desenvolvida posteriormente.
+- Incerteza na Previsão de Dinâmica de Jogo: Analistas e comissões técnicas frequentemente lutam para antecipar a natureza de um confronto. Será um jogo aberto e com muitos gols ou uma disputa tática e defensiva? A falta de uma previsão quantitativa sobre o total de gols dificulta o planejamento estratégico.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+- Subjetividade na Definição de Favoritismo: A determinação do resultado provável de uma partida ainda depende muito de opiniões de especialistas e análises subjetivas. Falta um método sistemático e data-driven para classificar a probabilidade de vitória, empate ou derrota, livre de vieses.
+
+- Complexidade na Análise Comparativa de Estilos: Identificar e comparar objetivamente os estilos de jogo das equipes é um processo manual e demorado. Não existem ferramentas amplamente acessíveis que classifiquem automaticamente os times em perfis táticos (ex: defensivo, contra-ataque, posse de bola), dificultando a análise de confrontos e a identificação de adversários com características semelhantes.
+
+O contexto de aplicação para a solução deste problema é uma ferramenta de suporte à decisão para o ecossistema do futebol. Ela seria utilizada por analistas de desempenho, comissões técnicas, jornalistas esportivos e plataformas de conteúdo para enriquecer suas análises pré e pós-jogo. O projeto será desenvolvido como um protótipo funcional, demonstrando em um ambiente controlado como a inteligência artificial pode servir de ponte entre os dados disponíveis e as decisões estratégicas no esporte, sem a necessidade de tecnologias proprietárias ou investimentos massivos.
 
 ## Questão de pesquisa
 
-A questão de pesquisa é o ponto de partida e a base orientadora de todo o trabalho a ser desenvolvido. Ela deve estar diretamente alinhada ao problema identificado e expressar, de forma clara, o que se deseja investigar ou comprovar.
+Estabelecemos uma questão principal e três questões específicas derivadas dela:
 
-O papel da questão de pesquisa é guiar todas as etapas do projeto — desde a definição da metodologia até a análise e interpretação dos resultados. Ao término da investigação ou experimentação, o objetivo é que seja possível responder a essa questão de forma fundamentada, utilizando evidências obtidas ao longo do processo.
+Questão Principal:
 
-**Dica:** Formule a questão de pesquisa de forma específica e objetiva, evitando perguntas muito amplas ou genéricas. Pergunte-se: "Ao final do trabalho, minha pesquisa terá condições de responder claramente a essa pergunta?"
+- De que maneira a aplicação de modelos de Machine Learning sobre dados estatísticos de partidas pode gerar previsões acuradas sobre os resultados e identificar perfis táticos em uma liga de futebol?
 
-> **Links Úteis**:
-> - [Questão de pesquisa](https://www.enago.com.br/academy/how-to-develop-good-research-question-types-examples/)
-> - [Problema de pesquisa](https://blog.even3.com.br/problema-de-pesquisa/)
+Questões Específicas:
+
+- Qual a eficácia de modelos de regressão para prever o número total de gols em um jogo com base no desempenho histórico das equipes?
+
+- É possível, através de algoritmos de classificação, prever o resultado final de uma partida (vitória, empate ou derrota) com um grau de acerto estatisticamente relevante?
+
+- Podem os algoritmos de clusterização agrupar equipes em perfis táticos distintos e coerentes, baseando-se em suas métricas de performance ofensiva e defensiva?
+
+Ao final do projeto, esperamos responder a estas perguntas com base nas evidências geradas pelo desempenho dos nossos modelos. A análise dos resultados nos permitirá validar a eficácia da abordagem e quantificar até que ponto a ciência de dados pode, de fato, ser aplicada para prever e entender as dinâmicas do futebol.
 
 ## Objetivos preliminares
 
